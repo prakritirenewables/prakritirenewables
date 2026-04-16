@@ -176,7 +176,7 @@ export default function Contact() {
                   <div className="w-16 h-16 bg-emerald-500 rounded-full flex items-center justify-center mb-6 shadow-xl shadow-emerald-500/20">
                     <CheckCircle className="text-white w-8 h-8" />
                   </div>
-                  <h3 className="text-2xl font-bold text-primary mb-2">Report Transmitted</h3>
+                  <h3 className="text-2xl font-bold text-primary mb-2">Inquiry Sent</h3>
                   <p className="text-stone-500 text-xs max-w-xs leading-relaxed font-medium">
                     Our team will review your enquiry and contact you within 24 hours. Please feel free to reach out to our leadership.
                   </p>
