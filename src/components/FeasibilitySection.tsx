@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "motion/react";
-import solarDatabase from "../solarData.json";
+import solarDatabase from "../solardata.json";
 
 export default function FeasibilitySection() {
   const [location, setLocation] = useState("");
