@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --font-headline: "Inter", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  --color-primary: #003b07;
+  --color-primary-container: #1a531b;
+  --color-on-primary: #ffffff;
+  --color-surface: #f8faf9;
+  --color-on-surface: #191c1c;
+  --color-on-surface-variant: #41493e;
+  --color-tertiary-container: #105239;
+  --color-on-tertiary-container: #86c4a4;
+  --color-surface-container-low: #f2f4f3;
+  --color-surface-container-high: #e6e9e8;
+  --color-surface-container-lowest: #ffffff;
+  --color-outline: #71796d;
+  --color-outline-variant: #c1c9bb;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary;
+  }
+}
+
+.editorial-shadow {
+  box-shadow: 0 20px 40px -15px rgba(0, 59, 7, 0.04);
+}
