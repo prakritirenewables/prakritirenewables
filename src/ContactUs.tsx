@@ -92,8 +92,6 @@ export default function Contact() {
                         <label className="text-[9px] font-black text-stone-400 uppercase tracking-widest ml-1">Full Name</label>
                         <input required name="name" type="text" onChange={handleChange} placeholder="e.g. Jane Doe" className="w-full bg-white border border-stone-100 px-4 py-3 rounded-xl text-xs outline-none focus:border-primary transition-all font-medium" />
                     </div>
-
-                    {/* CHANGE 2: Added Phone field next to Email */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-1.5">
                         <label className="text-[9px] font-black text-stone-400 uppercase tracking-widest ml-1">Email Address</label>
@@ -101,7 +99,7 @@ export default function Contact() {
                       </div>
                       <div className="space-y-1.5">
                         <label className="text-[9px] font-black text-stone-400 uppercase tracking-widest ml-1">Phone Number</label>
-                        <input required name="phone" type="tel" onChange={handleChange} placeholder="+91 XXXXX XXXXX" className="w-full bg-white border border-stone-100 px-4 py-3 rounded-xl text-xs outline-none focus:border-primary transition-all font-medium" />
+                        <input required name="phone number" type="tel" onChange={handleChange} placeholder="+91 XXXXX XXXXX" className="w-full bg-white border border-stone-100 px-4 py-3 rounded-xl text-xs outline-none focus:border-primary transition-all font-medium" />
                       </div>
                     </div>
                     
