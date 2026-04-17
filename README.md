@@ -1,20 +1,34 @@
 <div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+  <img width="200" alt="Prakriti Logo" src="public/logo.png" />
+  <h1>Prakriti Renewable Energy Solutions</h1>
+  <p><em>Official Frontend Repository</em></p>
 </div>
 
-# Run and deploy your AI Studio app
+---
 
-This contains everything you need to run your app locally.
+## Overview
 
-View your app in AI Studio: https://ai.studio/apps/c0dae013-ae02-46a1-bc9d-e819ad64039e
+This is the frontend codebase for **Prakriti Renewable Energy Solutions**, headquartered in Jammu and Kashmir, India. The platform serves as its digital storefront and lead-generation portal.
 
-## Run Locally
+Live Site: [prakritirenewables.co.in](https://prakritirenewables.co.in)
 
-**Prerequisites:**  Node.js
+## Architecture & Tech Stack
 
+This project contains:
+* **A lot of Vibe Coding:** Google Stitch, Google Gemini
+* **Framework:** React.js + Vite
+* **Styling:** Tailwind CSS
+* **Animations:** Framer Motion
+* **Icons:** Lucide React
+* **Routing:** React Router DOM
+* **Deployment & Form Handling:** Netlify
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Running Locally
+
+To run this application on your local machine:
+
+**Prerequisites:** Ensure you have [Node.js](https://nodejs.org/) installed.
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/prakritirenewables/prakritirenewables.git](https://github.com/prakritirenewables/prakritirenewables.git)
