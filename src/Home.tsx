@@ -14,37 +14,39 @@ import {
   Newspaper
 } from "lucide-react";
 
-// --- 1. HERO SECTION (TIGHTENED) ---
+// --- 1. HERO SECTION ---
 const Hero = () => (
-  <section className="relative px-8 pt-32 pb-16 overflow-hidden bg-surface">
-    <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+  <section className="relative px-8 pt-32 pb-16 overflow-hidden bg-stone-50 min-h-screen flex items-center">
+    <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10 w-full">
+      
       <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="lg:col-span-7 z-10">
-        <div className="inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-[9px] font-bold tracking-[0.2em] uppercase mb-6">
+        <div className="inline-block bg-primary/10 text-primary px-3 py-1 rounded-full text-[9px] font-bold tracking-[0.2em] uppercase mb-6 backdrop-blur-sm">
           30 Years of Engineering Trust
         </div>
-        <h1 className="text-5xl md:text-7xl font-black tracking-tighter text-primary leading-[0.9] mb-6">
+        <h1 className="text-5xl md:text-7xl font-black tracking-tighter text-primary leading-[0.9] mb-6 drop-shadow-sm">
           Energy Engineering. <br />
           <span className="italic font-light text-stone-400">Redefined.</span>
         </h1>
-        <p className="text-lg text-on-surface-variant max-w-lg leading-relaxed mb-8">
+        <p className="text-lg text-primary max-w-lg leading-relaxed mb-8 drop-shadow-sm">
           Based in Jammu, serving Pan-India. We deliver architectural-grade solar 
           infrastructure for high-demand industrial ecosystems.
         </p>
         <div className="flex flex-col sm:flex-row gap-3">
           <Link to="/contact">
-            <button className="w-full sm:w-auto bg-primary text-white px-8 py-4 rounded-full text-sm font-bold shadow-lg hover:bg-emerald-900 transition-all flex items-center justify-center gap-2 group">
+            <button className="w-full sm:w-auto bg-primary text-white px-8 py-4 rounded-full text-sm font-bold shadow-lg shadow-emerald-900/20 hover:bg-emerald-900 transition-all flex items-center justify-center gap-2 group">
               Partner with Us <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </button>
           </Link>
           <Link to="/readiness">
-            <button className="w-full sm:w-auto bg-white border border-stone-200 text-primary px-8 py-4 rounded-full text-sm font-bold hover:bg-stone-50 transition-all">
+            <button className="w-full sm:w-auto bg-white border border-stone-200 text-primary px-8 py-4 rounded-full text-sm font-bold hover:bg-stone-50 hover:border-stone-300 transition-all shadow-sm">
               Diagnostic Audit
             </button>
           </Link>
         </div>
       </motion.div>
+
       <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="lg:col-span-5">
-        <div className="aspect-[4/5] bg-stone-100 rounded-[2rem] overflow-hidden shadow-xl relative">
+        <div className="aspect-[4/5] bg-stone-100 rounded-[2rem] overflow-hidden shadow-2xl shadow-emerald-900/10 relative">
           <img alt="Solar" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000" src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&q=80&w=1200" />
           <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-xl p-6 rounded-2xl border border-white/20 shadow-lg">
             <p className="text-[9px] font-bold text-primary mb-0.5 uppercase tracking-widest">Global Output</p>
@@ -56,7 +58,7 @@ const Hero = () => (
   </section>
 );
 
-// --- 2. SOLUTIONS SECTION (CONDENSED) ---
+// --- 2. SOLUTIONS SECTION ---
 const Solutions = () => (
   <section className="px-8 py-20 bg-stone-50/50">
     <div className="max-w-7xl mx-auto">
@@ -88,7 +90,7 @@ const Solutions = () => (
   </section>
 );
 
-// --- 3. INDUSTRY HUB (6 NEWS ITEMS & GLOBAL TRACKER) ---
+// --- 3. INDUSTRY HUB ---
 const IndustryHub = () => {
   const [news, setNews] = useState([
     { title: "Global Solar Capacity Surpasses 2 Terawatts", link: "https://www.mercomindia.com/", pubDate: new Date().toISOString() },
@@ -119,7 +121,6 @@ const IndustryHub = () => {
     <section className="py-12 px-6 bg-stone-950 text-white rounded-[2rem] my-8 border border-white/5 relative overflow-hidden">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 relative z-10">
         
-        {/* LEFT COLUMN: REGISTRIES & GLOBAL TRACKER */}
         <div className="lg:col-span-5 space-y-4">
           <div className="flex items-center gap-2 opacity-40">
             <Landmark className="w-3.5 h-3.5" />
@@ -150,7 +151,6 @@ const IndustryHub = () => {
           </div>
         </div>
 
-        {/* RIGHT COLUMN: LATEST NEWS (6 ITEMS) */}
         <div className="lg:col-span-7 lg:border-l lg:border-white/5 lg:pl-10">
           <div className="flex justify-between items-center mb-6">
             <div className="flex items-center gap-2 opacity-40">
@@ -180,7 +180,7 @@ const IndustryHub = () => {
   );
 };
 
-// --- 4. CTA SECTION (SIGNIFICANTLY SHRUNK) ---
+// --- 4. CTA SECTION ---
 const CTA = () => (
   <section className="px-8 py-20">
     <div className="max-w-5xl mx-auto bg-primary p-10 md:p-16 rounded-[2.5rem] text-center relative overflow-hidden shadow-xl">
