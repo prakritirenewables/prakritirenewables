@@ -106,8 +106,8 @@ export default function Contact() {
                     <div className="space-y-1.5">
                       <label className="text-[9px] font-black text-stone-400 uppercase tracking-widest ml-1">Service Interest</label>
                       <select name="interest" onChange={handleChange} className="w-full bg-white border border-stone-100 px-4 py-3 rounded-xl text-xs outline-none focus:border-primary transition-all font-medium appearance-none">
-                        <option value="Utility-Scale B2B">Utility-Scale B2B</option>
-                        <option value="Residential B2C">Residential B2C</option>
+                        <option value="Commercial">Commercial</option>
+                        <option value="Residential">Residential</option>
                       </select>
                     </div>
 
@@ -128,7 +128,7 @@ export default function Contact() {
                   </div>
                   <h3 className="text-2xl font-bold text-primary mb-2">Inquiry Sent</h3>
                   <p className="text-stone-500 text-xs max-w-xs leading-relaxed font-medium">
-                    Our team will review your enquiry and contact you within 24 hours. Please feel free to contact our team
+                    Our team will review your enquiry and contact you within 24 hours. Please feel free to contact our team.
                   </p>
                   <button onClick={() => setIsSubmitted(false)} className="mt-8 text-[9px] font-black uppercase tracking-widest text-primary border-b border-primary/20 hover:border-primary transition-all">
                     Send another inquiry
