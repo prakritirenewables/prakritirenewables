@@ -58,7 +58,7 @@ export default function Categorization() {
             <button
               key={cat.id}
               onClick={() => setActive(index)}
-              className={`text-left p-8 rounded-[1.5rem] border transition-all duration-300 flex flex-col justify-between h-[260px] ${
+              className={`text-left p-8 rounded-3xl border transition-all duration-300 flex flex-col justify-between h-65 ${
                 isActive 
                 ? "bg-primary text-white border-primary shadow-xl shadow-primary/10" 
                 : "bg-stone-50/50 border-stone-100 text-primary hover:border-primary/20"

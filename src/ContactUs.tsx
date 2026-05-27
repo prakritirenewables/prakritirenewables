@@ -40,7 +40,7 @@ export default function Contact() {
     <div className="min-h-screen flex flex-col bg-white selection:bg-primary/10">
       <Navbar />
       
-      <main className="flex-grow pt-24 px-8 max-w-6xl mx-auto w-full">
+      <main className="grow pt-24 px-8 max-w-6xl mx-auto w-full">
         <section className="mb-12 border-b border-stone-100 pb-12 flex flex-col lg:flex-row items-center justify-between gap-12">
           <div className="flex-1">
             <motion.span 
@@ -67,7 +67,7 @@ export default function Contact() {
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="flex-shrink-0"
+            className="shrink-0"
           >
             <div className="w-64 h-64 md:w-80 md:h-80 p-6 bg-stone-50 rounded-[3.5rem] border border-stone-100 flex items-center justify-center shadow-inner relative group">
                 <img src={logo} alt="Prakriti Logo" className="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-700" />
@@ -76,10 +76,10 @@ export default function Contact() {
         </section>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-20">
-          <div className="lg:col-span-7 bg-stone-50/50 p-8 rounded-[2rem] border border-stone-100 relative overflow-hidden min-h-[500px] flex flex-col">
+          <div className="lg:col-span-7 bg-stone-50/50 p-8 rounded-4xl border border-stone-100 relative overflow-hidden min-h-125 flex flex-col">
             <AnimatePresence mode="wait">
               {!isSubmitted ? (
-                <motion.div key="form" initial={{ opacity: 1 }} exit={{ opacity: 0, y: -20 }} className="flex-grow">
+                <motion.div key="form" initial={{ opacity: 1 }} exit={{ opacity: 0, y: -20 }} className="grow">
                   <div className="flex items-center gap-2 mb-8">
                      <MessageSquare className="w-4 h-4 text-primary opacity-40" />
                      <h2 className="text-xl font-bold text-primary tracking-tight">Direct Inquiry</h2>

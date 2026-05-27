@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { motion } from "motion/react";
-import solarDatabase from "../solardata.json";
+import { motion } from "framer-motion";
+import { MapPin, Zap, Sun } from "lucide-react";
+import solarDatabase from "../solardata.json"; // Keep your existing import
 
 export default function FeasibilitySection() {
   const [location, setLocation] = useState("");
@@ -61,82 +62,105 @@ export default function FeasibilitySection() {
   };
 
   return (
-    <section className="mb-20 bg-surface-container-low rounded-2xl p-8 lg:p-12 border border-outline-variant/20 shadow-sm">
-      <div className="flex flex-col lg:flex-row gap-16">
+    <section className="mb-20">
+      <div className="bg-white rounded-[2.5rem] p-8 md:p-12 shadow-xl shadow-stone-200/50 border border-stone-100 flex flex-col lg:flex-row gap-12 items-center">
         
-        {/* Form Side */}
-        <div className="w-full lg:w-1/2">
-          <div className="flex items-center gap-3 mb-8">
-            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary font-bold">01</div>
-            <h2 className="text-2xl font-bold tracking-tight text-primary">Feasibility Analysis</h2>
+        {/* --- LEFT SIDE: THE FORM --- */}
+        <div className="w-full lg:w-1/2 space-y-8">
+          <div>
+            <div className="inline-flex items-center gap-2 mb-4 bg-emerald-500/10 px-4 py-2 rounded-full">
+              <Zap className="w-4 h-4 text-emerald-600" />
+              <span className="text-[10px] font-black uppercase tracking-[0.2em] text-emerald-700">Feasibility Engine</span>
+            </div>
+            <h3 className="text-3xl font-black text-primary tracking-tight mb-2">Technical Feasibility</h3>
+            <p className="text-stone-500 text-sm font-medium">Enter your property details to generate a preliminary engineering model based on local irradiance.</p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-            <div className="relative">
-              <label className="block text-[10px] font-bold uppercase tracking-widest text-outline mb-1">Location (City/PIN)</label>
-              <input value={location} onChange={(e) => setLocation(e.target.value)} placeholder="e.g. Jammu" className="w-full bg-transparent border-b border-outline py-2 outline-none focus:border-primary transition-colors" />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="space-y-1.5">
+              <label className="text-[9px] font-black text-stone-400 uppercase tracking-widest ml-1">Location (City/PIN)</label>
+              <div className="relative">
+                <MapPin className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-stone-400" />
+                <input value={location} onChange={(e) => setLocation(e.target.value)} placeholder="e.g. Jammu" className="w-full bg-stone-50 border border-stone-100 pl-11 pr-4 py-3 rounded-xl text-xs outline-none focus:border-primary transition-all font-medium" />
+              </div>
             </div>
-            <div className="relative">
-              <label className="block text-[10px] font-bold uppercase tracking-widest text-outline mb-1">Avg. Monthly Bill (₹)</label>
-              <input type="number" value={bill} onChange={(e) => setBill(e.target.value)} className="w-full bg-transparent border-b border-outline py-2 outline-none focus:border-primary" />
+            
+            <div className="space-y-1.5">
+              <label className="text-[9px] font-black text-stone-400 uppercase tracking-widest ml-1">Avg. Monthly Bill (₹)</label>
+              <input type="number" value={bill} onChange={(e) => setBill(e.target.value)} className="w-full bg-stone-50 border border-stone-100 px-4 py-3 rounded-xl text-xs outline-none focus:border-primary transition-all font-medium" />
             </div>
-            <div className="relative">
-              <label className="block text-[10px] font-bold uppercase tracking-widest text-outline mb-1">Sanctioned Load (kW)</label>
-              <input type="number" value={load} onChange={(e) => setLoad(e.target.value)} className="w-full bg-transparent border-b border-outline py-2 outline-none focus:border-primary" />
+
+            <div className="space-y-1.5">
+              <label className="text-[9px] font-black text-stone-400 uppercase tracking-widest ml-1">Sanctioned Load (kW)</label>
+              <input type="number" value={load} onChange={(e) => setLoad(e.target.value)} className="w-full bg-stone-50 border border-stone-100 px-4 py-3 rounded-xl text-xs outline-none focus:border-primary transition-all font-medium" />
             </div>
-            <div className="relative">
-              <label className="block text-[10px] font-bold uppercase tracking-widest text-outline mb-1">Shadow-Free Area (sq ft)</label>
-              <input type="number" value={area} onChange={(e) => setArea(e.target.value)} className="w-full bg-transparent border-b border-outline py-2 outline-none focus:border-primary" />
+
+            <div className="space-y-1.5">
+              <label className="text-[9px] font-black text-stone-400 uppercase tracking-widest ml-1">Shadow-Free Area (sq ft)</label>
+              <input type="number" value={area} onChange={(e) => setArea(e.target.value)} className="w-full bg-stone-50 border border-stone-100 px-4 py-3 rounded-xl text-xs outline-none focus:border-primary transition-all font-medium" />
             </div>
           </div>
 
           <motion.button
             onClick={handleCalculate}
             disabled={isCalculating}
-            whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="w-full md:w-auto bg-primary text-on-primary px-10 py-4 rounded font-bold shadow-lg shadow-primary/20 disabled:opacity-50"
+            className="w-full bg-primary text-white py-4 rounded-xl text-[10px] font-black uppercase tracking-[0.2em] shadow-lg shadow-primary/10 hover:bg-emerald-900 transition-all disabled:opacity-50 flex items-center justify-center gap-2 mt-4"
           >
             {isCalculating ? "Consulting Satellite Data..." : "Calculate Feasibility"}
           </motion.button>
         </div>
 
-        {/* Results Side */}
-        <div className="w-full lg:w-1/2">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/10">
-              <p className="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mb-2">Recommended System</p>
-              <div className="flex items-baseline gap-1">
-                <span className="text-4xl font-black text-primary">{results.system}</span>
-                <span className="text-lg font-bold text-outline">kW</span>
+        {/* --- RIGHT SIDE: THE RESULTS --- */}
+        <div className="w-full lg:w-1/2 bg-primary rounded-4xl p-8 md:p-10 text-white relative overflow-hidden flex flex-col justify-center min-h-100">
+          <div className="relative z-10 space-y-8 w-full">
+            
+            <div className="grid grid-cols-2 gap-6">
+              <div>
+                <p className="text-[10px] font-black text-white/50 uppercase tracking-[0.2em] mb-2">Recommended System</p>
+                <div className="flex items-baseline gap-1">
+                  <span className="text-4xl md:text-5xl font-black text-emerald-400 tracking-tighter">{results.system}</span>
+                  <span className="text-lg font-bold text-white/70">kW</span>
+                </div>
+              </div>
+              
+              <div>
+                <p className="text-[10px] font-black text-white/50 uppercase tracking-[0.2em] mb-2">Est. Generation</p>
+                <div className="flex items-baseline gap-1">
+                  <span className="text-4xl md:text-5xl font-black text-emerald-400 tracking-tighter">{results.generation}</span>
+                  <span className="text-lg font-bold text-white/70">kWh</span>
+                </div>
+                <p className="text-[8px] text-white/40 font-bold uppercase mt-2 tracking-widest flex items-center gap-1">
+                  <Sun className="w-3 h-3" /> Based on {results.cityFound}
+                </p>
               </div>
             </div>
-            <div className="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/10">
-              <p className="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mb-2">Monthly Generation</p>
-              <div className="flex items-baseline gap-1">
-                <span className="text-4xl font-black text-primary">{results.generation}</span>
-                <span className="text-lg font-bold text-outline">kWh</span>
+
+            <div className="pt-8 border-t border-white/10">
+              <div className="flex justify-between mb-3">
+                <p className="text-[10px] font-black uppercase tracking-widest text-white/50">Roof Utilization</p>
+                <p className="text-[10px] font-black uppercase tracking-widest text-emerald-400">{results.utilization}% Optimal</p>
               </div>
-              <p className="text-[9px] text-primary/60 font-bold uppercase mt-2 tracking-tighter">Based on {results.cityFound} Irradiance</p>
+              <div className="h-2 bg-white/10 rounded-full overflow-hidden">
+                <motion.div 
+                  initial={{ width: 0 }}
+                  animate={{ width: `${results.utilization}%` }} 
+                  transition={{ duration: 1, ease: "easeOut" }}
+                  className="h-full bg-emerald-400" 
+                />
+              </div>
             </div>
-            <div className="md:col-span-2 bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/10">
-               <div className="flex justify-between mb-4">
-                  <p className="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Roof Utilization</p>
-                  <p className="text-[10px] font-bold uppercase text-primary">{results.utilization}% Optimal</p>
-               </div>
-               <div className="mt-8 pt-6 border-t border-outline-variant/10">
-  <p className="text-[10px] leading-relaxed text-stone-400 italic">
-    *Results generated by this tool are for illustrative purposes only and are based on regional averages. 
-  </p>
-</div>
-               <div className="h-2 bg-surface-container-high rounded-full overflow-hidden">
-                  <motion.div 
-                    animate={{ width: results.utilization + "%" }} 
-                    className="h-full bg-primary" 
-                  />
-               </div>
+
+            <div className="pt-2">
+              <p className="text-[9px] leading-relaxed text-white/30 italic font-medium">
+                *Results generated by this tool are for illustrative purposes only and are based on regional averages. 
+              </p>
             </div>
+
           </div>
+          
+          {/* Background design flair */}
+          <div className="absolute -right-20 -bottom-20 w-64 h-64 bg-white/5 rounded-full blur-3xl pointer-events-none" />
         </div>
 
       </div>

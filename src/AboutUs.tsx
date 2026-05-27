@@ -11,7 +11,7 @@ export default function AboutUs() {
     <div className="min-h-screen flex flex-col bg-white">
       <Navbar />
       
-      <main className="flex-grow pt-24 px-8 max-w-6xl mx-auto w-full">
+      <main className="grow pt-24 px-8 max-w-6xl mx-auto w-full">
         {/* CENTERED ABOUT HERO */}
 <section className="mb-16 border-b border-stone-100 pb-16 text-center">
   

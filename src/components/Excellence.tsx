@@ -18,7 +18,7 @@ export default function Excellence() {
           <div className="relative group">
             <img 
               src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&q=80&w=1200" 
-              className="rounded-3xl w-full h-[400px] object-cover grayscale hover:grayscale-0 transition-all duration-1000 border border-stone-100 shadow-xl" 
+              className="rounded-3xl w-full h-100 object-cover grayscale hover:grayscale-0 transition-all duration-1000 border border-stone-100 shadow-xl" 
               alt="Close-up Precision Installation"
             />
             <div className="absolute top-4 right-4">

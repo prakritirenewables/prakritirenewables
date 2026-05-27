@@ -20,7 +20,7 @@ function App() {
         <Navbar />
 
         {/* 4. The pages swap out in the middle */}
-        <main className="flex-grow pt-32 px-8 md:px-12 max-w-7xl mx-auto w-full">
+        <main className="grow pt-8 px-8 md:px-12 max-w-7xl mx-auto w-full">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<AboutUs />} />

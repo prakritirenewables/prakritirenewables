@@ -49,7 +49,7 @@ export default function Values() {
          <div className="flex gap-4">
             <span className="text-[8px] font-bold text-stone-300 uppercase tracking-widest">Jammu Operations</span>
          </div>
-         <div className="w-32 h-[1px] bg-stone-100 self-center" />
+         <div className="w-32 h-px bg-stone-100 self-center" />
       </div>
     </section>
   );

@@ -12,7 +12,7 @@ export default function Commercial() {
       <Navbar />
       
       {/* SHRUNK PADDING: pt-24 (matching Residential/About) */}
-      <main className="flex-grow pt-24 px-8 max-w-6xl mx-auto w-full">
+      <main className="grow pt-24 px-8 max-w-6xl mx-auto w-full">
         
         {/* CONDENSED COMMERCIAL HERO */}
         <section className="mb-16 border-b border-stone-100 pb-12 flex flex-col lg:flex-row items-start gap-12">
@@ -62,7 +62,7 @@ export default function Commercial() {
           <motion.div 
             initial={{ opacity: 0, scale: 0.98 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="flex-1 w-full h-[380px] rounded-3xl overflow-hidden shadow-xl border border-stone-100 relative group"
+            className="flex-1 w-full h-95 rounded-3xl overflow-hidden shadow-xl border border-stone-100 relative group"
           >
             <img 
               src="https://images.unsplash.com/photo-1548337138-e87d889cc369?q=80&w=2070&auto=format&fit=crop" 

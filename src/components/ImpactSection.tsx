@@ -33,7 +33,7 @@ export default function ImpactSection() {
           <div className="w-10 h-10 rounded-full bg-emerald-500 flex items-center justify-center text-on-surface font-bold">
             04
           </div>
-          <h2 className="text-2xl font-bold tracking-tight uppercase tracking-widest">
+          <h2 className="text-2xl font-bold tracking-tight uppercase">
             Environmental Impact
           </h2>
         </div>

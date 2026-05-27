@@ -4,13 +4,13 @@ export default function BentoGrid() {
   return (
     <section className="py-16 border-t border-stone-100">
       <div className="flex items-center gap-4 mb-10">
-        <div className="w-10 h-[1px] bg-primary" />
+        <div className="w-10 h-px bg-primary" />
         <h2 className="text-[11px] font-black uppercase tracking-[0.4em] text-primary">Core B2B Verticals</h2>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
         {/* LARGE CARD: Increased padding and font sizes */}
-        <div className="md:col-span-8 p-10 bg-stone-50 rounded-[2rem] border border-stone-100 flex flex-col justify-between h-[340px] group hover:bg-white transition-all shadow-sm">
+        <div className="md:col-span-8 p-10 bg-stone-50 rounded-4xl border border-stone-100 flex flex-col justify-between h-85 group hover:bg-white transition-all shadow-sm">
           <div>
             <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center border border-stone-100 mb-8">
               <Sun className="w-5 h-5 text-primary" />
@@ -29,7 +29,7 @@ export default function BentoGrid() {
         </div>
 
         {/* SMALL CARD: Clearer list items */}
-        <div className="md:col-span-4 p-10 bg-white rounded-[2rem] border border-stone-100 flex flex-col justify-between h-[340px] shadow-sm">
+        <div className="md:col-span-4 p-10 bg-white rounded-4xl border border-stone-100 flex flex-col justify-between h-85 shadow-sm">
           <div>
             <div className="w-10 h-10 rounded-xl bg-stone-50 flex items-center justify-center border border-stone-100 mb-8">
               <Search className="w-5 h-5 text-primary" />

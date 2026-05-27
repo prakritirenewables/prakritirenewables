@@ -21,7 +21,7 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative h-[400px] lg:h-[500px] rounded-xl overflow-hidden group"
+          className="relative h-100 lg:h-125 rounded-xl overflow-hidden group"
         >
           <img
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
@@ -29,7 +29,7 @@ export default function Hero() {
             alt="Solar panels on a roof"
             referrerPolicy="no-referrer"
           />
-          <div className="absolute inset-0 bg-gradient-to-tr from-primary/40 to-transparent"></div>
+          <div className="absolute inset-0 bg-linear-to-tr from-primary/40 to-transparent"></div>
         </motion.div>
       </div>
     </header>

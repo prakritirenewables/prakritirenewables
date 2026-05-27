@@ -8,13 +8,13 @@ export default function CTA() {
       {/* SHRINK: max-w-4xl makes it feel like a professional component rather than a page filler.
         PADDING: Reduced from p-20 to p-12.
       */}
-      <div className="max-w-4xl mx-auto bg-primary rounded-[2rem] p-10 md:p-12 text-center relative overflow-hidden shadow-xl">
+      <div className="max-w-4xl mx-auto bg-primary rounded-4xl p-10 md:p-12 text-center relative overflow-hidden shadow-xl">
         
         {/* Pulse background is now more subtle */}
         <motion.div 
           animate={{ opacity: [0.03, 0.08, 0.03] }}
           transition={{ duration: 8, repeat: Infinity }}
-          className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white via-transparent to-transparent pointer-events-none"
+          className="absolute inset-0 bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-white via-transparent to-transparent pointer-events-none"
         />
 
         <div className="relative z-10">
