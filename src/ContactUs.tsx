@@ -147,7 +147,7 @@ export default function Contact() {
                        <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center border border-white/10"><User className="w-4 h-4" /></div>
                        <div>
                           <p className="text-[8px] font-bold text-white/40 uppercase tracking-[0.2em] mb-1">Director</p>
-                          <p className="text-sm font-bold">Mr. Amardeep Singh</p>
+                          <p className="text-sm font-bold">Amrik Singh</p>
                        </div>
                     </div>
 
@@ -156,7 +156,7 @@ export default function Contact() {
                        <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center border border-white/10 group-hover/link:bg-white group-hover/link:text-primary transition-all"><Phone className="w-4 h-4" /></div>
                        <div>
                           <p className="text-[8px] font-bold text-white/40 uppercase tracking-[0.2em] mb-1">Direct Line</p>
-                          <p className="text-sm font-bold group-hover/link:underline">+91 6005-997744; +91 94197-97658 </p>
+                          <p className="text-sm font-bold group-hover/link:underline">+91 88996-36613 </p>
                        </div>
                     </a>
 
